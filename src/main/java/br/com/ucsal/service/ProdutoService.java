@@ -5,6 +5,9 @@ import java.util.List;
 import br.com.ucsal.model.Produto;
 import br.com.ucsal.persistencia.ProdutoRepository;
 
+
+/*O construtor agora recebe ProdutoRepository<?, ?> ao invés de <Produto, Integer> e realiza o casting
+do objeto recebido como argumento para o tipo esperado pelo campo produtoRepository*/
 public class ProdutoService {
 
     private ProdutoRepository<Produto, Integer> produtoRepository;
