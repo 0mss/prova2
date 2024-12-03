@@ -12,7 +12,7 @@ public class SingletonLoader {
     private static final Map<Class<?>, Object> singletons = new ConcurrentHashMap<>();
 
     public static void loadSingletons() {
-        Reflections reflections = new Reflections("br.com.ucsal"); // Ajuste o pacote base conforme necessário
+        Reflections reflections = new Reflections("br.com.ucsal"); 
         Set<Class<?>> singletonClasses = reflections.getTypesAnnotatedWith(Singleton.class);
 
         for (Class<?> singletonClass : singletonClasses) {
@@ -30,7 +30,7 @@ public class SingletonLoader {
 
     private static Object createInstance(Class<?> clazz) throws Exception {
         var constructor = clazz.getDeclaredConstructor();
-        constructor.setAccessible(true); // Permite acesso a construtores privados ou protegidos
+        constructor.setAccessible(true); 
         return constructor.newInstance();
     }
 
