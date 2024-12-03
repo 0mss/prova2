@@ -9,6 +9,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import br.com.ucsal.annotations.Singleton;
 import br.com.ucsal.model.Produto;
 
+/*Removidos a instância da classe o método getInstance, uma vez que, a partir da anotação @Singleton, o SingletonLoader passou a ser 
+o responsável por gerenciar a instância da classe.*/
 @Singleton
 public class MemoriaProdutoRepository implements ProdutoRepository<Produto, Integer>{
 
