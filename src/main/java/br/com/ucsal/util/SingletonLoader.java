@@ -7,6 +7,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+
+/* Classe responsável por gerenciar e criar instâncias únicas (singletons) de classes 
+  anotadas com @Singleton. Utiliza reflexão para localizar essas classes e armazena 
+  suas instâncias em um mapa compartilhado. Permite recuperar singletons por meio do método
+  getSingleton e garante que apenas uma instância de cada classe seja criada durante
+  a execução do programa. */
 public class SingletonLoader {
 
     private static final Map<Class<?>, Object> singletons = new ConcurrentHashMap<>();
