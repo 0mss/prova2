@@ -13,6 +13,8 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+//Adicionado o @Inject para injeção de dependência do ProdutoService
+//Adicionado @Rota para mapear a rota utilizando a anotação, passando uma String como parâmetro para definir o path
 @Rota("/listar")
 public class ProdutoListarCommand implements Command {
 
