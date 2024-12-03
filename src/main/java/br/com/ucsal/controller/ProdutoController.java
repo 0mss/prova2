@@ -16,6 +16,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+
+/*ProdutoController agora tem o método carregarComandos(), que, utilizando reflections, inspeciona as classes Commands e mapeia elas com o devido comando num Map "commands".
+No init() adicionamos a chamada do método injetarDependencias(), do objeto Injetor, passando o ProdutoController Isso permite que o Injetor processe o objeto 
+ProdutoController e realize a injeção de dependências nos campos anotados com @Inject. A linha Injetor.injetarDependencias(command) é usada para configurar dinamicamente 
+cada instância de command, garantindo que suas dependências sejam resolvidas antes de serem registradas e usadas no sistema. Isso elimina a necessidade de criar e configurar
+manualmente os serviços e recursos em cada command, promovendo reutilização e modularidade.*/
 @WebServlet("/view/*")  
 public class ProdutoController extends HttpServlet {
 
