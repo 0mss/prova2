@@ -6,6 +6,10 @@ import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
 
+/*Ao listener foi adicionada a chamada do método loadSingletons() do objeto SingletonLoader, responsável por implementar um container de singletons, 
+garantindo que apenas uma instância de cada classe anotada com @Singleton exista durante a execução do programa. Ainda há um pequeno teste para ter
+certeza que, ao criar dois repositórios em memória, ambos apontam para a mesma instância.*/
+
 @WebListener
 public class InicializadorListener implements ServletContextListener {
     @Override
