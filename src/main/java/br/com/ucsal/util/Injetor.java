@@ -8,12 +8,10 @@ import br.com.ucsal.persistencia.ProdutoRepository;
 import br.com.ucsal.service.ProdutoService;
 
 
-/*
-  Classe utilitária responsável por injetar dependências em objetos cujos campos estão 
+/* Classe utilitária responsável por injetar dependências em objetos cujos campos estão 
   anotados com @Inject. Utiliza reflexão para localizar os campos e resolve as dependências 
   com base no tipo esperado. Atualmente, suporta a injeção de ProdutoService, 
-  que é criado com um ProdutoRepository obtido via PersistenciaFactory.
- */
+  que é criado com um ProdutoRepository obtido via PersistenciaFactory. */
 public class Injetor {
 
     public static void injetarDependencias(Object objeto) {
