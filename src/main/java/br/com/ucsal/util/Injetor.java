@@ -17,7 +17,7 @@ public class Injetor {
             if (field.isAnnotationPresent(Inject.class)) {
                 Object dependencia = obterDependencia(field.getType());
                 if (dependencia != null) {
-                    field.setAccessible(true); // Permite acesso ao campo privado
+                    field.setAccessible(true); 
                     try {
                         field.set(objeto, dependencia);
                     } catch (IllegalAccessException e) {
@@ -32,7 +32,7 @@ public class Injetor {
 
     private static Object obterDependencia(Class<?> tipo) {
         if (tipo.equals(ProdutoService.class)) {
-            ProdutoRepository<?, ?> repository = PersistenciaFactory.getProdutoRepository(PersistenciaFactory.MEMORIA); // Ou HSQL
+            ProdutoRepository<?, ?> repository = PersistenciaFactory.getProdutoRepository(PersistenciaFactory.MEMORIA); 
             return new ProdutoService(repository);
         }
         return null;
